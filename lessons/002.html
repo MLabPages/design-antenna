@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- data/lessons.json から scripts/build.py が生成。手で編集しない。 -->
+  <title>第2回 コントラスト比｜デザインアンテナ</title>
+  <meta name="description" content="文字と背景の明るさの差は、数値で確かめられる。本文は 4.5:1 以上が目安です。">
+  <link rel="canonical" href="https://mlabpages.github.io/design-antenna/lessons/002.html">
+  <meta name="theme-color" content="#0d3b66">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="デザインアンテナ">
+  <meta property="og:title" content="第2回 コントラスト比｜デザインアンテナ">
+  <meta property="og:description" content="文字と背景の明るさの差は、数値で確かめられる。本文は 4.5:1 以上が目安です。">
+  <meta property="og:url" content="https://mlabpages.github.io/design-antenna/lessons/002.html">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-11-16">
+  <meta property="article:section" content="アクセシビリティ">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans+JP:wght@400;500;600&amp;family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;display=swap">
+  <link rel="prev" href="001.html">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="page-lesson">
+  <a class="skip" href="#main">本文へ</a>
+  <div class="topline" aria-hidden="true"></div>
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="brand" href="../index.html">
+        <svg class="mark" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+  <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+    <path d="M16 22.4V13"/>
+    <path d="M10.1 15.1a7.4 7.4 0 0 1 11.8 0"/>
+    <path d="M6.3 11.2a12.4 12.4 0 0 1 19.4 0"/>
+  </g>
+  <circle cx="16" cy="24.5" r="1.9" fill="currentColor"/>
+</svg>
+        <span class="brand-text">
+          <span class="brand-en" lang="en">Design Antenna</span>
+          <span class="brand-ja">デザインアンテナ</span>
+        </span>
+      </a>
+      <nav class="top-nav" aria-label="サイト">
+        <a href="../index.html">目次</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <article class="wrap lesson">
+      <header class="lesson-head">
+        <p class="issue"><span class="issue-affix">第</span><span class="issue-num">2</span><span class="issue-affix">回</span></p>
+        <p class="lesson-meta"><time datetime="2026-11-16">2026年11月16日</time><span class="sep" aria-hidden="true">·</span><span class="lesson-cat">アクセシビリティ</span></p>
+        <h1 class="lesson-title">コントラスト比</h1>
+        <p class="title-en" lang="en">Contrast Ratio</p>
+      </header>
+      <figure class="figure">
+          <img src="../images/002.png" alt="2枚のスライドの比較図。左の悪い例は白地に淡い灰色で「研究の背景」と本文が書かれ、見出しは2.6:1、本文は1.8:1で基準に届かない。右の良い例は同じ文面を濃い紺と濃いグレーで書き、見出しは15.5:1、本文は8.2:1で基準を満たす。下に、WCAG 2.2（AA）の基準は本文4.5:1以上、大きな文字は3:1以上と添えてある。" width="2400" height="1350" decoding="async">
+          <figcaption>同じ文面でも、文字の濃さで読みやすさが変わります。数値で確かめれば迷いません。</figcaption>
+        </figure>
+      <section class="block">
+        <h2><span class="idx" aria-hidden="true">01</span>どういう知識か</h2>
+        <div class="prose">
+          <p>文字と背景の明るさの差を数値にしたものが<strong>コントラスト比</strong>です。差がまったくない 1:1 から、白地に黒の 21:1 まであります。</p>
+<p>ウェブのアクセシビリティ基準 WCAG 2.2 の達成基準 1.4.3（レベルAA）では、本文の文字は <strong>4.5:1 以上</strong>、大きな文字（18ポイント以上、太字なら14ポイント以上）は <strong>3:1 以上</strong>と定めています。</p>
+<p>「なんとなく読める」を、目分量ではなく数字で確かめられるのがポイントです。</p>
+        </div>
+      </section>
+      <section class="block">
+        <h2><span class="idx" aria-hidden="true">02</span>具体例</h2>
+        <div class="prose">
+          <p>悪い例：白い背景に、淡い灰色（#BBBFC5）の本文。上品に見えますが、コントラスト比は 1.8:1 しかありません。見出しの灰色（#9AA0A8）も 2.6:1 で、大きな文字の基準 3:1 にも届きません。</p>
+<p>良い例：見出しは濃い紺（#1F2430）で 15.5:1、本文は濃いグレー（#4A4F59）で 8.2:1。黒一色にしなくても、落ち着いた色のまま基準を満たせます。</p>
+        </div>
+      </section>
+      <section class="block tip">
+        <h2><span class="idx" aria-hidden="true">03</span>今日から使えるひとこと</h2>
+        <blockquote>
+          <p>スライドや研究サイトでいちばん薄い文字色（注釈、出典、グラフの軸ラベルなど）を1つ選び、<a href="https://webaim.org/resources/contrastchecker/">WebAIM Contrast Checker</a> に文字色と背景色を入れてみてください。4.5:1 に届かなければ、色はそのままで明るさだけ一段濃くしましょう。</p>
+        </blockquote>
+      </section>
+      <section class="sources" aria-labelledby="sources-title">
+        <h2 id="sources-title">出典</h2>
+        <ol>
+          <li>
+            <a class="source-title" href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html">Understanding SC 1.4.3: Contrast (Minimum) (Level AA)</a>
+            <span class="source-meta">W3C Web Accessibility Initiative（WCAG 2.2）</span>
+            <span class="source-url">https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html</span>
+          </li>
+          <li>
+            <a class="source-title" href="https://webaim.org/resources/contrastchecker/">Contrast Checker</a>
+            <span class="source-meta">WebAIM</span>
+            <span class="source-url">https://webaim.org/resources/contrastchecker/</span>
+          </li>
+        </ol>
+      </section>
+      <nav class="pager" aria-label="前後の回">
+      <div class="pager-slot">
+        <a class="pager-link" href="001.html">
+          <span class="pager-label">前の回</span>
+          <span class="pager-title">第1回 近接の法則</span>
+        </a>
+      </div>
+      <div class="pager-slot pager-next">
+        <p class="pager-none">
+          <span class="pager-label">次の回</span>
+          <span class="pager-title">これが最新の回です</span>
+        </p>
+      </div>
+    </nav>
+    </article>
+  </main>
+  <footer class="site-footer">
+      <div class="wrap">
+        <p class="footer-name"><a href="../index.html">デザインアンテナ</a></p>
+        <ul class="footer-notes">
+        <li>掲載している文章は、個人の学習内容を短くまとめたものです。</li>
+        <li>図版には、AIで生成した画像が含まれることがあります。</li>
+        </ul>
+      </div>
+    </footer>
+</body>
+</html>
