@@ -23,6 +23,7 @@
   <style>
 body:has(#filter-c1:checked) .toc-item:not([data-filter="c1"]){display:none}
 body:has(#filter-c2:checked) .toc-item:not([data-filter="c2"]){display:none}
+body:has(#filter-c3:checked) .toc-item:not([data-filter="c3"]){display:none}
 </style>
 </head>
 <body class="page-index">
@@ -48,14 +49,14 @@ body:has(#filter-c2:checked) .toc-item:not([data-filter="c2"]){display:none}
   </header>
   <main id="main" tabindex="-1">
     <div class="wrap">
-      <p class="count">全<span class="num">2</span>回、最新は<time datetime="2026-11-16">2026年11月16日</time></p>
+      <p class="count">全<span class="num">3</span>回、最新は<time datetime="2026-11-17">2026年11月17日</time></p>
       <fieldset class="filters">
         <legend>カテゴリで絞り込む</legend>
         <div class="choices">
           <label class="choice">
           <input type="radio" name="category" id="filter-all" checked>
           <span class="choice-label">すべて</span>
-          <span class="choice-n">2</span>
+          <span class="choice-n">3</span>
         </label><label class="choice">
           <input type="radio" name="category" id="filter-c1">
           <span class="choice-label">ゲシュタルト原則</span>
@@ -64,11 +65,24 @@ body:has(#filter-c2:checked) .toc-item:not([data-filter="c2"]){display:none}
           <input type="radio" name="category" id="filter-c2">
           <span class="choice-label">アクセシビリティ</span>
           <span class="choice-n">1</span>
+        </label><label class="choice">
+          <input type="radio" name="category" id="filter-c3">
+          <span class="choice-label">データビジュアライゼーション</span>
+          <span class="choice-n">1</span>
         </label>
         </div>
       </fieldset>
       <ol class="toc" role="list" aria-label="レッスン">
-        <li class="toc-item" role="listitem" data-filter="c2">
+        <li class="toc-item" role="listitem" data-filter="c3">
+      <a class="toc-link has-thumb" href="lessons/003.html">
+        <p class="toc-meta"><span class="toc-no">第3回</span><time class="dot-date" datetime="2026-11-17">2026.11.17</time></p>
+        <p class="toc-cat">データビジュアライゼーション</p>
+        <h2 class="toc-title">データインク比</h2>
+        <p class="toc-en" lang="en">Data-Ink Ratio</p>
+        <p class="toc-summary">グラフのインクは、できるだけデータそのものに使う。消しても情報が減らない線は消してみましょう。</p>
+        <img class="toc-thumb" src="images/003.png" alt="" width="2400" height="1350" loading="lazy" decoding="async">
+      </a>
+    </li><li class="toc-item" role="listitem" data-filter="c2">
       <a class="toc-link has-thumb" href="lessons/002.html">
         <p class="toc-meta"><span class="toc-no">第2回</span><time class="dot-date" datetime="2026-11-16">2026.11.16</time></p>
         <p class="toc-cat">アクセシビリティ</p>
