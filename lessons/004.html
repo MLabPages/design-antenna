@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- data/lessons.json から scripts/build.py が生成。手で編集しない。 -->
+  <title>第4回 行の長さ｜デザインアンテナ</title>
+  <meta name="description" content="文章は1行を短めに。欧文なら45〜75字、日本語なら40字以内を目安に、段落の幅を先に決めましょう。">
+  <link rel="canonical" href="https://mlabpages.github.io/design-antenna/lessons/004.html">
+  <meta name="theme-color" content="#0d3b66">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="デザインアンテナ">
+  <meta property="og:title" content="第4回 行の長さ｜デザインアンテナ">
+  <meta property="og:description" content="文章は1行を短めに。欧文なら45〜75字、日本語なら40字以内を目安に、段落の幅を先に決めましょう。">
+  <meta property="og:url" content="https://mlabpages.github.io/design-antenna/lessons/004.html">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-11-18">
+  <meta property="article:section" content="タイポグラフィ">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans+JP:wght@400;500;600&amp;family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;display=swap">
+  <link rel="prev" href="003.html">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="page-lesson">
+  <a class="skip" href="#main">本文へ</a>
+  <div class="topline" aria-hidden="true"></div>
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="brand" href="../index.html">
+        <svg class="mark" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+  <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+    <path d="M16 22.4V13"/>
+    <path d="M10.1 15.1a7.4 7.4 0 0 1 11.8 0"/>
+    <path d="M6.3 11.2a12.4 12.4 0 0 1 19.4 0"/>
+  </g>
+  <circle cx="16" cy="24.5" r="1.9" fill="currentColor"/>
+</svg>
+        <span class="brand-text">
+          <span class="brand-en" lang="en">Design Antenna</span>
+          <span class="brand-ja">デザインアンテナ</span>
+        </span>
+      </a>
+      <nav class="top-nav" aria-label="サイト">
+        <a href="../index.html">目次</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <article class="wrap lesson">
+      <header class="lesson-head">
+        <p class="issue"><span class="issue-affix">第</span><span class="issue-num">4</span><span class="issue-affix">回</span></p>
+        <p class="lesson-meta"><time datetime="2026-11-18">2026年11月18日</time><span class="sep" aria-hidden="true">·</span><span class="lesson-cat">タイポグラフィ</span></p>
+        <h1 class="lesson-title">行の長さ</h1>
+        <p class="title-en" lang="en">Line Length (Measure)</p>
+      </header>
+      <figure class="figure">
+          <img src="../images/004.png" alt="同じ日本語の文章を2通りに組んだ比較図。上の悪い例は、1行約60字で横に長く、行間も狭い。下の良い例は、1行約32字の狭い段で、行間を広げている。右側に目安として、欧文は1行45〜75字（理想は66字、Bringhurst）、和文は40字以内（WCAG 2.2 SC 1.4.8）、行間は文字の1.5倍以上と大きく書かれている。" width="2400" height="1530" decoding="async">
+          <figcaption>同じ文章でも、1行を短くして行間を広げるだけで、目が次の行へ迷わず戻れます。</figcaption>
+        </figure>
+      <section class="block">
+        <h2><span class="idx" aria-hidden="true">01</span>どういう知識か</h2>
+        <div class="prose">
+          <p>タイポグラフィでは、1行の長さを<strong>行長（メジャー）</strong>と呼びます。タイポグラファーのロバート・ブリングハーストは『The Elements of Typographic Style』で、欧文の1段組なら<strong>1行45〜75字</strong>が満足できる長さで、<strong>66字が理想</strong>とされると書いています。</p>
+<p>Webアクセシビリティの基準 WCAG 2.2 の達成基準1.4.8（レベルAAA）も、文章のかたまりの幅を80字以内、<strong>日本語などのCJKでは40字以内</strong>にできることを求めています。あわせて、段落内の行間は<strong>1.5倍以上</strong>です。</p>
+<p>W3Cの解説によると、長い行は読む位置を見失いやすく、次の行へ移るのが難しくなります。幅の狭い段落のほうが、次の行へ目を運びやすいのです。</p>
+        </div>
+      </section>
+      <section class="block">
+        <h2><span class="idx" aria-hidden="true">02</span>具体例</h2>
+        <div class="prose">
+          <p>悪い例：横長の画面いっぱいに本文を流し込み、1行約60字・行間も詰まった状態。行末から次の行頭へ戻るたびに、どの行を読んでいたか迷います。</p>
+<p>良い例：同じ文章を1行約32字の段に収め、行間を約1.8倍に広げます。行数は増えても目の戻りが楽で、最後まで読み通せます。空いた横のスペースには、要点や図を置けます。</p>
+        </div>
+      </section>
+      <section class="block tip">
+        <h2><span class="idx" aria-hidden="true">03</span>今日から使えるひとこと</h2>
+        <blockquote>
+          <p>研究サイトなら、本文の段落に CSS で `max-width: 40em;` と `line-height: 1.8;` を指定してみてください。日本語の全角1文字はほぼ1emなので、1行が約40字に収まります。スライドでは、説明文のテキストボックスを横幅いっぱいに広げず、半分ほどの幅にして図と並べましょう。</p>
+        </blockquote>
+      </section>
+      <section class="sources" aria-labelledby="sources-title">
+        <h2 id="sources-title">出典</h2>
+        <ol>
+          <li>
+            <a class="source-title" href="http://webtypography.net/2.1.2">The Elements of Typographic Style（2.1.2 Choose a comfortable measure）</a>
+            <span class="source-meta">Robert Bringhurst（Hartley &amp; Marks）。Web版への適用解説：Richard Rutter「The Elements of Typographic Style Applied to the Web」</span>
+            <span class="source-url">http://webtypography.net/2.1.2</span>
+          </li>
+          <li>
+            <a class="source-title" href="https://www.w3.org/WAI/WCAG22/Understanding/visual-presentation.html">Understanding SC 1.4.8: Visual Presentation (Level AAA)</a>
+            <span class="source-meta">W3C WAI（WCAG 2.2）</span>
+            <span class="source-url">https://www.w3.org/WAI/WCAG22/Understanding/visual-presentation.html</span>
+          </li>
+        </ol>
+      </section>
+      <nav class="pager" aria-label="前後の回">
+      <div class="pager-slot">
+        <a class="pager-link" href="003.html">
+          <span class="pager-label">前の回</span>
+          <span class="pager-title">第3回 データインク比</span>
+        </a>
+      </div>
+      <div class="pager-slot pager-next">
+        <p class="pager-none">
+          <span class="pager-label">次の回</span>
+          <span class="pager-title">これが最新の回です</span>
+        </p>
+      </div>
+    </nav>
+    </article>
+  </main>
+  <footer class="site-footer">
+      <div class="wrap">
+        <p class="footer-name"><a href="../index.html">デザインアンテナ</a></p>
+        <ul class="footer-notes">
+        <li>掲載している文章は、個人の学習内容を短くまとめたものです。</li>
+        <li>図版には、AIで生成した画像が含まれることがあります。</li>
+        </ul>
+      </div>
+    </footer>
+</body>
+</html>
