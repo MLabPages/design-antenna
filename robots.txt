@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mlabpages.github.io/design-antenna/sitemap.xml
+Sitemap: https://design-antenna.mlabcraft.com/sitemap.xml

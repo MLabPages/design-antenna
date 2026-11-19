@@ -1,8 +1,8 @@
 # デザインアンテナ
 
-毎日ひとつのデザイン知識を公開する静的サイトです。GitHub Pages の `main` ブランチ、リポジトリのルートから配信します。
+毎日ひとつのデザイン知識を公開する静的サイトです。Cloudflare Pages が `main` ブランチのルートにある生成済みの HTML を、ビルドなしで配信します。
 
-公開URL: https://mlabpages.github.io/design-antenna/
+公開URLは <https://design-antenna.mlabcraft.com/> です。
 
 最初のレッスンは 2026-11-15 の 17:00頃（日本時間）です。それまでは目次に空の案内だけが出ます。HTML は手で編集しません。`data/lessons.json` に1件足して、ビルドします。
 
@@ -74,7 +74,7 @@ python3 -m http.server 8000
 
 ### 5. `main` に載せて push する
 
-`data/lessons.json`、追加した画像、ビルドで更新されたファイルをコミットし、`main` に push します。GitHub Pages がルートのファイルをそのまま公開します。使わなくなった画像は、手で削除してかまいません。ビルドは画像を消しません。
+`data/lessons.json`、追加した画像、ビルドで更新されたファイルをコミットし、`main` に push します。Cloudflare Pages がルートのファイルをそのまま公開します。使わなくなった画像は、手で削除してかまいません。ビルドは画像を消しません。
 
 ## データの全体
 
@@ -104,4 +104,4 @@ python3 -m http.server 8000
 
 ## 公開
 
-GitHub の Settings → Pages → Build and deployment → Deploy from a branch で、Branch を `main`、Folder を `/ (root)` にします。公開先は https://mlabpages.github.io/design-antenna/ です。
+GitHub リポジトリを Cloudflare Pages に接続します。本番ブランチを `main`、フレームワークを「なし」、ビルドコマンドを空欄、ビルド出力ディレクトリを `.` にします。ルートディレクトリは既定のリポジトリルートを使います。プロジェクトの「カスタムドメイン」に `design-antenna.mlabcraft.com` を追加します。

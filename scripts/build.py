@@ -877,7 +877,7 @@ def render_lesson(
         body_class="page-lesson",
         title=f'第{lesson["number"]}回 {lesson["title"]}｜{site["title"]}',
         description=description,
-        canonical=f'{site["url"]}/lessons/{lesson["filename"]}',
+        canonical=lesson_url(site, lesson),
         asset_prefix="../",
         og_type="article",
         inner=inner,
@@ -929,12 +929,16 @@ def render_simple(
     )
 
 
+def lesson_url(site: dict[str, Any], lesson: dict[str, Any]) -> str:
+    return f"{site['url']}/lessons/{lesson['filename'].removesuffix('.html')}"
+
+
 def render_sitemap(site: dict[str, Any]) -> str:
     lessons = sorted(site["lessons"], key=lambda item: item["number"])
     lastmod = lessons[-1]["date"] if lessons else site["launch"]["date"]
     urls = [f"  <url>\n    <loc>{esc(site['url'] + '/')}</loc>\n    <lastmod>{esc(lastmod)}</lastmod>\n  </url>"]
     for lesson in lessons:
-        loc = f"{site['url']}/lessons/{lesson['filename']}"
+        loc = lesson_url(site, lesson)
         urls.append(
             f"  <url>\n    <loc>{esc(loc)}</loc>\n    <lastmod>{esc(lesson['date'])}</lastmod>\n  </url>"
         )
