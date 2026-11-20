@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- data/lessons.json から scripts/build.py が生成。手で編集しない。 -->
+  <title>第6回 色覚の多様性に配慮した配色｜デザインアンテナ</title>
+  <meta name="description" content="グラフの色分けは「赤と緑」をやめて、色覚のちがいを越えて見分けやすい Okabe–Ito の色に。色だけに頼ら…">
+  <link rel="canonical" href="https://design-antenna.mlabcraft.com/lessons/006">
+  <meta name="theme-color" content="#0d3b66">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="デザインアンテナ">
+  <meta property="og:title" content="第6回 色覚の多様性に配慮した配色｜デザインアンテナ">
+  <meta property="og:description" content="グラフの色分けは「赤と緑」をやめて、色覚のちがいを越えて見分けやすい Okabe–Ito の色に。色だけに頼ら…">
+  <meta property="og:url" content="https://design-antenna.mlabcraft.com/lessons/006">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-11-20">
+  <meta property="article:section" content="色彩">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans+JP:wght@400;500;600&amp;family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;display=swap">
+  <link rel="prev" href="005.html">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="page-lesson">
+  <a class="skip" href="#main">本文へ</a>
+  <div class="topline" aria-hidden="true"></div>
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="brand" href="../index.html">
+        <svg class="mark" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+  <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+    <path d="M16 22.4V13"/>
+    <path d="M10.1 15.1a7.4 7.4 0 0 1 11.8 0"/>
+    <path d="M6.3 11.2a12.4 12.4 0 0 1 19.4 0"/>
+  </g>
+  <circle cx="16" cy="24.5" r="1.9" fill="currentColor"/>
+</svg>
+        <span class="brand-text">
+          <span class="brand-en" lang="en">Design Antenna</span>
+          <span class="brand-ja">デザインアンテナ</span>
+        </span>
+      </a>
+      <nav class="top-nav" aria-label="サイト">
+        <a href="../index.html">目次</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <article class="wrap lesson">
+      <header class="lesson-head">
+        <p class="issue"><span class="issue-affix">第</span><span class="issue-num">6</span><span class="issue-affix">回</span></p>
+        <p class="lesson-meta"><time datetime="2026-11-20">2026年11月20日</time><span class="sep" aria-hidden="true">·</span><span class="lesson-cat">色彩</span></p>
+        <h1 class="lesson-title">色覚の多様性に配慮した配色</h1>
+        <p class="title-en" lang="en">Color Universal Design (Okabe–Ito Palette)</p>
+      </header>
+      <figure class="figure">
+          <img src="../images/006.png" alt="同じ折れ線グラフを、一般的な色覚、P型（1型）の色覚シミュレーション、D型（2型）の色覚シミュレーションの3通りで並べた比較図。上段の悪い例は、条件A・B・Cの3本を赤・緑・橙の同じ実線で描き、左上の凡例で区別している。P型とD型のシミュレーションでは3本ともオリーブ色から黄土色の似た色になり、凡例と線を対応づけられない。下段の良い例は、Okabe–Itoパレットの朱色の実線と丸、青の破線と四角、青みの緑の点線と三角で描き、線の右端に条件A・B・Cと直接ラベルを付けている。シミュレーションでも青ははっきり区別でき、ほかの2本も明るさと線種で見分けられる。下の帯にOkabe–Itoパレットの8色と、そのHEX値（#000000、#E69F00、#56B4E9、#009E73、#F0E442、#0072B2、#D55E00、#CC79A7）が並んでいる。グラフの数値は架空のデータ。" width="2400" height="1740" decoding="async">
+          <figcaption>赤・緑・橙だけで色分けしたグラフは、P型・D型の色覚シミュレーションでは3本がほぼ同じ色になります。Okabe–Ito の色に線種と直接ラベルを組み合わせると、どの見え方でも区別できます（グラフは架空のデータ、シミュレーションは Machado ら 2009 のモデル）。</figcaption>
+        </figure>
+      <section class="block">
+        <h2><span class="idx" aria-hidden="true">01</span>どういう知識か</h2>
+        <div class="prose">
+          <p>岡部正隆さんと伊藤啓さん（お二人とも強いP型の色覚）が、研究者向けにまとめた「カラーユニバーサルデザイン（CUD）」の考え方です。赤と緑を見分けにくい色覚は、白人男性の約12人に1人（8%）、アジア系男性の約20人に1人（5%）にあります。250人の会場なら10人以上いる計算で、論文の査読者が白人男性3人なら、少なくとも1人がそうである確率は約22%です。</p>
+<p>二人の示す原則は、<strong>①どの色覚でも見分けやすい配色を選ぶ</strong>、<strong>②色だけでなく、形・位置・線の種類・模様の違いも組み合わせる</strong>、<strong>③色の名前で伝える場面では色名を書き添える</strong>、そして<strong>＋1 見やすく美しいデザインに</strong>、です。</p>
+<p>配色の具体案として、8色のパレット（いまは「Okabe–Ito パレット」と呼ばれます）が示されています。黒 #000000、オレンジ #E69F00、空色 #56B4E9、青みの緑 #009E73、黄 #F0E442、青 #0072B2、朱色 #D55E00、赤紫 #CC79A7 です。赤の代わりにP型の人にも見えやすい朱色を、緑の代わりに赤や茶と混同しにくい青みの緑を使います。細い線や小さな文字には、空色や黄よりも濃い青やオレンジが向いています。</p>
+        </div>
+      </section>
+      <section class="block">
+        <h2><span class="idx" aria-hidden="true">02</span>具体例</h2>
+        <div class="prose">
+          <p>悪い例：3条件の折れ線を、赤・緑・橙の同じ実線で描き、凡例だけで区別します。P型・D型の色覚シミュレーションでは3本ともよく似たオリーブ色〜黄土色になり、凡例と線を照らし合わせられません。</p>
+<p>良い例：条件Aを朱色 #D55E00 の実線と丸、条件Bを青 #0072B2 の破線と四角、条件Cを青みの緑 #009E73 の点線と三角にして、線の端に「条件A」などの名前を直接書きます。シミュレーションでも青ははっきり別の色に残り、ほかの2本も明るさと線の種類で見分けられます。白黒で印刷しても読めます。</p>
+        </div>
+      </section>
+      <section class="block tip">
+        <h2><span class="idx" aria-hidden="true">03</span>今日から使えるひとこと</h2>
+        <blockquote>
+          <p>次に作るグラフで、赤を朱色 #D55E00、緑を青みの緑 #009E73 に置きかえ、3色目以降は青 #0072B2 やオレンジ #E69F00 を使ってみてください。PowerPoint や Excel の色の設定では、この16進数をそのまま入力できます。あわせて線の種類やマーカーを変え、凡例をやめて線の横に名前を直接書きましょう。蛍光二重染色の画像なら、赤と緑ではなくマゼンタと緑にします。</p>
+        </blockquote>
+      </section>
+      <section class="sources" aria-labelledby="sources-title">
+        <h2 id="sources-title">出典</h2>
+        <ol>
+          <li>
+            <a class="source-title" href="https://jfly.uni-koeln.de/color/">Color Universal Design (CUD) – How to make figures and presentations that are friendly to Colorblind people</a>
+            <span class="source-meta">Masataka Okabe, Kei Ito（2002年公開、2008年改訂）</span>
+            <span class="source-url">https://jfly.uni-koeln.de/color/</span>
+          </li>
+          <li>
+            <a class="source-title" href="https://www.inf.ufrgs.br/~oliveira/pubs_files/CVD_Simulation/CVD_Simulation.html">A Physiologically-based Model for Simulation of Color Vision Deficiency（図の色覚シミュレーションに使用）</a>
+            <span class="source-meta">Gustavo M. Machado, Manuel M. Oliveira, Leandro A. F. Fernandes（IEEE Transactions on Visualization and Computer Graphics, Vol. 15, No. 6, pp. 1291–1298, 2009）</span>
+            <span class="source-url">https://www.inf.ufrgs.br/~oliveira/pubs_files/CVD_Simulation/CVD_Simulation.html</span>
+          </li>
+        </ol>
+      </section>
+      <nav class="pager" aria-label="前後の回">
+      <div class="pager-slot">
+        <a class="pager-link" href="005.html">
+          <span class="pager-label">前の回</span>
+          <span class="pager-title">第5回 アサーション・エビデンス</span>
+        </a>
+      </div>
+      <div class="pager-slot pager-next">
+        <p class="pager-none">
+          <span class="pager-label">次の回</span>
+          <span class="pager-title">これが最新の回です</span>
+        </p>
+      </div>
+    </nav>
+    </article>
+  </main>
+  <footer class="site-footer">
+      <div class="wrap">
+        <p class="footer-name"><a href="../index.html">デザインアンテナ</a></p>
+        <ul class="footer-notes">
+        <li>掲載している文章は、個人の学習内容を短くまとめたものです。</li>
+        <li>図版には、AIで生成した画像が含まれることがあります。</li>
+        </ul>
+      </div>
+    </footer>
+</body>
+</html>
