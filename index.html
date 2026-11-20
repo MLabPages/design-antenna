@@ -26,6 +26,7 @@ body:has(#filter-c2:checked) .toc-item:not([data-filter="c2"]){display:none}
 body:has(#filter-c3:checked) .toc-item:not([data-filter="c3"]){display:none}
 body:has(#filter-c4:checked) .toc-item:not([data-filter="c4"]){display:none}
 body:has(#filter-c5:checked) .toc-item:not([data-filter="c5"]){display:none}
+body:has(#filter-c6:checked) .toc-item:not([data-filter="c6"]){display:none}
 </style>
 </head>
 <body class="page-index">
@@ -51,39 +52,52 @@ body:has(#filter-c5:checked) .toc-item:not([data-filter="c5"]){display:none}
   </header>
   <main id="main" tabindex="-1">
     <div class="wrap">
-      <p class="count">全<span class="num">5</span>回、最新は<time datetime="2026-11-19">2026年11月19日</time></p>
+      <p class="count">全<span class="num">6</span>回、最新は<time datetime="2026-11-20">2026年11月20日</time></p>
       <fieldset class="filters">
         <legend>カテゴリで絞り込む</legend>
         <div class="choices">
           <label class="choice">
           <input type="radio" name="category" id="filter-all" checked>
           <span class="choice-label">すべて</span>
-          <span class="choice-n">5</span>
+          <span class="choice-n">6</span>
         </label><label class="choice">
           <input type="radio" name="category" id="filter-c1">
           <span class="choice-label">タイポグラフィ</span>
           <span class="choice-n">1</span>
         </label><label class="choice">
           <input type="radio" name="category" id="filter-c2">
-          <span class="choice-label">ゲシュタルト原則</span>
+          <span class="choice-label">色彩</span>
           <span class="choice-n">1</span>
         </label><label class="choice">
           <input type="radio" name="category" id="filter-c3">
-          <span class="choice-label">アクセシビリティ</span>
+          <span class="choice-label">ゲシュタルト原則</span>
           <span class="choice-n">1</span>
         </label><label class="choice">
           <input type="radio" name="category" id="filter-c4">
-          <span class="choice-label">データビジュアライゼーション</span>
+          <span class="choice-label">アクセシビリティ</span>
           <span class="choice-n">1</span>
         </label><label class="choice">
           <input type="radio" name="category" id="filter-c5">
+          <span class="choice-label">データビジュアライゼーション</span>
+          <span class="choice-n">1</span>
+        </label><label class="choice">
+          <input type="radio" name="category" id="filter-c6">
           <span class="choice-label">プレゼン・スライドのデザイン</span>
           <span class="choice-n">1</span>
         </label>
         </div>
       </fieldset>
       <ol class="toc" role="list" aria-label="レッスン">
-        <li class="toc-item" role="listitem" data-filter="c5">
+        <li class="toc-item" role="listitem" data-filter="c2">
+      <a class="toc-link has-thumb" href="lessons/006.html">
+        <p class="toc-meta"><span class="toc-no">第6回</span><time class="dot-date" datetime="2026-11-20">2026.11.20</time></p>
+        <p class="toc-cat">色彩</p>
+        <h2 class="toc-title">色覚の多様性に配慮した配色</h2>
+        <p class="toc-en" lang="en">Color Universal Design (Okabe–Ito Palette)</p>
+        <p class="toc-summary">グラフの色分けは「赤と緑」をやめて、色覚のちがいを越えて見分けやすい Okabe–Ito の色に。色だけに頼ら…</p>
+        <img class="toc-thumb" src="images/006.png" alt="" width="2400" height="1740" loading="lazy" decoding="async">
+      </a>
+    </li><li class="toc-item" role="listitem" data-filter="c6">
       <a class="toc-link has-thumb" href="lessons/005.html">
         <p class="toc-meta"><span class="toc-no">第5回</span><time class="dot-date" datetime="2026-11-19">2026.11.19</time></p>
         <p class="toc-cat">プレゼン・スライドのデザイン</p>
@@ -101,7 +115,7 @@ body:has(#filter-c5:checked) .toc-item:not([data-filter="c5"]){display:none}
         <p class="toc-summary">文章は1行を短めに。欧文なら45〜75字、日本語なら40字以内を目安に、段落の幅を先に決めましょう。</p>
         <img class="toc-thumb" src="images/004.png" alt="" width="2400" height="1530" loading="lazy" decoding="async">
       </a>
-    </li><li class="toc-item" role="listitem" data-filter="c4">
+    </li><li class="toc-item" role="listitem" data-filter="c5">
       <a class="toc-link has-thumb" href="lessons/003.html">
         <p class="toc-meta"><span class="toc-no">第3回</span><time class="dot-date" datetime="2026-11-17">2026.11.17</time></p>
         <p class="toc-cat">データビジュアライゼーション</p>
@@ -110,7 +124,7 @@ body:has(#filter-c5:checked) .toc-item:not([data-filter="c5"]){display:none}
         <p class="toc-summary">グラフのインクは、できるだけデータそのものに使う。消しても情報が減らない線は消してみましょう。</p>
         <img class="toc-thumb" src="images/003.png" alt="" width="2400" height="1350" loading="lazy" decoding="async">
       </a>
-    </li><li class="toc-item" role="listitem" data-filter="c3">
+    </li><li class="toc-item" role="listitem" data-filter="c4">
       <a class="toc-link has-thumb" href="lessons/002.html">
         <p class="toc-meta"><span class="toc-no">第2回</span><time class="dot-date" datetime="2026-11-16">2026.11.16</time></p>
         <p class="toc-cat">アクセシビリティ</p>
@@ -119,7 +133,7 @@ body:has(#filter-c5:checked) .toc-item:not([data-filter="c5"]){display:none}
         <p class="toc-summary">文字と背景の明るさの差は、数値で確かめられる。本文は 4.5:1 以上が目安です。</p>
         <img class="toc-thumb" src="images/002.png" alt="" width="2400" height="1350" loading="lazy" decoding="async">
       </a>
-    </li><li class="toc-item" role="listitem" data-filter="c2">
+    </li><li class="toc-item" role="listitem" data-filter="c3">
       <a class="toc-link has-thumb" href="lessons/001.html">
         <p class="toc-meta"><span class="toc-no">第1回</span><time class="dot-date" datetime="2026-11-15">2026.11.15</time></p>
         <p class="toc-cat">ゲシュタルト原則</p>
