@@ -27,6 +27,7 @@ body:has(#filter-c3:checked) .toc-item:not([data-filter="c3"]){display:none}
 body:has(#filter-c4:checked) .toc-item:not([data-filter="c4"]){display:none}
 body:has(#filter-c5:checked) .toc-item:not([data-filter="c5"]){display:none}
 body:has(#filter-c6:checked) .toc-item:not([data-filter="c6"]){display:none}
+body:has(#filter-c7:checked) .toc-item:not([data-filter="c7"]){display:none}
 </style>
 </head>
 <body class="page-index">
@@ -52,14 +53,14 @@ body:has(#filter-c6:checked) .toc-item:not([data-filter="c6"]){display:none}
   </header>
   <main id="main" tabindex="-1">
     <div class="wrap">
-      <p class="count">全<span class="num">6</span>回、最新は<time datetime="2026-11-20">2026年11月20日</time></p>
+      <p class="count">全<span class="num">7</span>回、最新は<time datetime="2026-11-21">2026年11月21日</time></p>
       <fieldset class="filters">
         <legend>カテゴリで絞り込む</legend>
         <div class="choices">
           <label class="choice">
           <input type="radio" name="category" id="filter-all" checked>
           <span class="choice-label">すべて</span>
-          <span class="choice-n">6</span>
+          <span class="choice-n">7</span>
         </label><label class="choice">
           <input type="radio" name="category" id="filter-c1">
           <span class="choice-label">タイポグラフィ</span>
@@ -84,11 +85,24 @@ body:has(#filter-c6:checked) .toc-item:not([data-filter="c6"]){display:none}
           <input type="radio" name="category" id="filter-c6">
           <span class="choice-label">プレゼン・スライドのデザイン</span>
           <span class="choice-n">1</span>
+        </label><label class="choice">
+          <input type="radio" name="category" id="filter-c7">
+          <span class="choice-label">UI/UXの法則</span>
+          <span class="choice-n">1</span>
         </label>
         </div>
       </fieldset>
       <ol class="toc" role="list" aria-label="レッスン">
-        <li class="toc-item" role="listitem" data-filter="c2">
+        <li class="toc-item" role="listitem" data-filter="c7">
+      <a class="toc-link has-thumb" href="lessons/007.html">
+        <p class="toc-meta"><span class="toc-no">第7回</span><time class="dot-date" datetime="2026-11-21">2026.11.21</time></p>
+        <p class="toc-cat">UI/UXの法則</p>
+        <h2 class="toc-title">フィッツの法則</h2>
+        <p class="toc-en" lang="en">Fitts&#x27;s Law</p>
+        <p class="toc-summary">ボタンやリンクは「近く」「大きく」。押すのにかかる時間は、的までの距離と的の大きさの比で決まります。</p>
+        <img class="toc-thumb" src="images/007.png" alt="" width="2400" height="1350" loading="lazy" decoding="async">
+      </a>
+    </li><li class="toc-item" role="listitem" data-filter="c2">
       <a class="toc-link has-thumb" href="lessons/006.html">
         <p class="toc-meta"><span class="toc-no">第6回</span><time class="dot-date" datetime="2026-11-20">2026.11.20</time></p>
         <p class="toc-cat">色彩</p>

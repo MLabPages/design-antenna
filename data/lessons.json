@@ -181,6 +181,49 @@
       "image": "images/006.png",
       "imageAlt": "同じ折れ線グラフを、一般的な色覚、P型（1型）の色覚シミュレーション、D型（2型）の色覚シミュレーションの3通りで並べた比較図。上段の悪い例は、条件A・B・Cの3本を赤・緑・橙の同じ実線で描き、左上の凡例で区別している。P型とD型のシミュレーションでは3本ともオリーブ色から黄土色の似た色になり、凡例と線を対応づけられない。下段の良い例は、Okabe–Itoパレットの朱色の実線と丸、青の破線と四角、青みの緑の点線と三角で描き、線の右端に条件A・B・Cと直接ラベルを付けている。シミュレーションでも青ははっきり区別でき、ほかの2本も明るさと線種で見分けられる。下の帯にOkabe–Itoパレットの8色と、そのHEX値（#000000、#E69F00、#56B4E9、#009E73、#F0E442、#0072B2、#D55E00、#CC79A7）が並んでいる。グラフの数値は架空のデータ。",
       "imageCaption": "赤・緑・橙だけで色分けしたグラフは、P型・D型の色覚シミュレーションでは3本がほぼ同じ色になります。Okabe–Ito の色に線種と直接ラベルを組み合わせると、どの見え方でも区別できます（グラフは架空のデータ、シミュレーションは Machado ら 2009 のモデル）。"
+    },
+    {
+      "number": 7,
+      "date": "2026-11-21",
+      "title": "フィッツの法則",
+      "titleEn": "Fitts's Law",
+      "category": "UI/UXの法則",
+      "summary": "ボタンやリンクは「近く」「大きく」。押すのにかかる時間は、的までの距離と的の大きさの比で決まります。",
+      "what": "1954年、心理学者のポール・フィッツは、2つの的のあいだをペンで交互にすばやくたたく実験などから、狙って手を動かすのにかかる時間が「的までの距離」と「的の大きさ」で決まることを示しました。画面の操作の研究（HCI）では、MacKenzie（1992）がまとめた次の形がよく使われます。\n\n**MT = a + b · log₂(D / W + 1)**\n\nD は的までの距離、W は動かす向きに測った的の幅、a と b は人や機器（マウス、指など）で決まる定数です。log₂(D / W + 1) は「難しさの指数（ID）」と呼ばれ、単位はビットです。\n\nポイントは、時間が D と W の「比」で決まることです。**的を近づける**か、**的を大きくする**と、速く、押しまちがいも少なくなります。距離が同じなら、幅を2倍にすると難しさはおよそ1ビット下がります。\n\nウェブでは、WCAG 2.2 が押せる範囲の目安を示しています。24×24 CSS px 以上がレベルAA（2.5.8。小さくても周りに十分な間隔があれば例外）、44×44 CSS px 以上がレベルAAA（2.5.5）です。",
+      "example": "悪い例：研究サイトの論文一覧で「PDF・スライド・コード」を、小さな文字リンクのまま詰めて並べます。押せる範囲は高さ28pxほど、隣とのすき間は10pxほどです。カーソルから600px先なら、難しさは log₂(600/28 + 1) ≈ 4.5ビット。スマホでは隣のリンクを押してしまいがちです。\n\n良い例：同じ3つを高さ56pxのボタンにして、20pxずつ間をあけます。難しさは log₂(600/56 + 1) ≈ 3.6ビットに下がり、指でもマウスでも一度で押せます。よく使う操作（「次へ」「送信」など）を、目と手が向かう場所の近くに置けば、D も小さくなります。",
+      "tip": "自分の研究サイトをスマホで開き、論文のPDFリンクやメニューを親指で押してみてください。押しにくければ、CSS の padding で押せる範囲を高さ44px以上に広げ、隣とのすき間もあけましょう。文字の大きさはそのままでも、押せる範囲だけを広げられます。フォームやアンケート画面でも、よく使うボタンは「大きく、近くに」です。",
+      "sources": [
+        {
+          "title": "The information capacity of the human motor system in controlling the amplitude of movement",
+          "author": "Paul M. Fitts",
+          "year": "1954",
+          "url": "https://doi.org/10.1037/h0055392",
+          "note": "Journal of Experimental Psychology, 47(6), 381–391"
+        },
+        {
+          "title": "Fitts' law as a research and design tool in human-computer interaction",
+          "author": "I. Scott MacKenzie",
+          "year": "1992",
+          "url": "http://www.yorku.ca/mack/hci1992.html",
+          "note": "Human-Computer Interaction, 7, 91–139（MT = a + b log₂(D/W + 1) の形）"
+        },
+        {
+          "title": "Understanding Success Criterion 2.5.8: Target Size (Minimum)",
+          "author": "W3C WAI",
+          "year": "2023",
+          "url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
+          "note": "WCAG 2.2、レベルAA：24×24 CSS px"
+        },
+        {
+          "title": "Understanding Success Criterion 2.5.5: Target Size (Enhanced)",
+          "author": "W3C WAI",
+          "url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html",
+          "note": "WCAG 2.2、レベルAAA：44×44 CSS px"
+        }
+      ],
+      "image": "images/007.png",
+      "imageAlt": "フィッツの法則の図。上段：カーソルから距離Dだけ離れた幅Wの的と、式 MT = a + b·log₂(D/W + 1)。下段左の悪い例：論文カードに「PDF」「スライド」「コード」の小さな文字リンクが詰まって並び、難しさは約4.5ビット。下段右の良い例：同じ3つを高さ56pxのボタンにして20pxずつ間をあけ、難しさは約3.6ビット。",
+      "imageCaption": "押せる範囲を大きく、間をあけるだけで、同じ距離でも押しやすくなります（IDはカーソルから600px先の場合）。"
     }
   ]
 }
