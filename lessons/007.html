@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- data/lessons.json から scripts/build.py が生成。手で編集しない。 -->
+  <title>第7回 フィッツの法則｜デザインアンテナ</title>
+  <meta name="description" content="ボタンやリンクは「近く」「大きく」。押すのにかかる時間は、的までの距離と的の大きさの比で決まります。">
+  <link rel="canonical" href="https://design-antenna.mlabcraft.com/lessons/007">
+  <meta name="theme-color" content="#0d3b66">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="デザインアンテナ">
+  <meta property="og:title" content="第7回 フィッツの法則｜デザインアンテナ">
+  <meta property="og:description" content="ボタンやリンクは「近く」「大きく」。押すのにかかる時間は、的までの距離と的の大きさの比で決まります。">
+  <meta property="og:url" content="https://design-antenna.mlabcraft.com/lessons/007">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-11-21">
+  <meta property="article:section" content="UI/UXの法則">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans+JP:wght@400;500;600&amp;family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;display=swap">
+  <link rel="prev" href="006.html">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="page-lesson">
+  <a class="skip" href="#main">本文へ</a>
+  <div class="topline" aria-hidden="true"></div>
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="brand" href="../index.html">
+        <svg class="mark" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+  <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+    <path d="M16 22.4V13"/>
+    <path d="M10.1 15.1a7.4 7.4 0 0 1 11.8 0"/>
+    <path d="M6.3 11.2a12.4 12.4 0 0 1 19.4 0"/>
+  </g>
+  <circle cx="16" cy="24.5" r="1.9" fill="currentColor"/>
+</svg>
+        <span class="brand-text">
+          <span class="brand-en" lang="en">Design Antenna</span>
+          <span class="brand-ja">デザインアンテナ</span>
+        </span>
+      </a>
+      <nav class="top-nav" aria-label="サイト">
+        <a href="../index.html">目次</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <article class="wrap lesson">
+      <header class="lesson-head">
+        <p class="issue"><span class="issue-affix">第</span><span class="issue-num">7</span><span class="issue-affix">回</span></p>
+        <p class="lesson-meta"><time datetime="2026-11-21">2026年11月21日</time><span class="sep" aria-hidden="true">·</span><span class="lesson-cat">UI/UXの法則</span></p>
+        <h1 class="lesson-title">フィッツの法則</h1>
+        <p class="title-en" lang="en">Fitts&#x27;s Law</p>
+      </header>
+      <figure class="figure">
+          <img src="../images/007.png" alt="フィッツの法則の図。上段：カーソルから距離Dだけ離れた幅Wの的と、式 MT = a + b·log₂(D/W + 1)。下段左の悪い例：論文カードに「PDF」「スライド」「コード」の小さな文字リンクが詰まって並び、難しさは約4.5ビット。下段右の良い例：同じ3つを高さ56pxのボタンにして20pxずつ間をあけ、難しさは約3.6ビット。" width="2400" height="1350" decoding="async">
+          <figcaption>押せる範囲を大きく、間をあけるだけで、同じ距離でも押しやすくなります（IDはカーソルから600px先の場合）。</figcaption>
+        </figure>
+      <section class="block">
+        <h2><span class="idx" aria-hidden="true">01</span>どういう知識か</h2>
+        <div class="prose">
+          <p>1954年、心理学者のポール・フィッツは、2つの的のあいだをペンで交互にすばやくたたく実験などから、狙って手を動かすのにかかる時間が「的までの距離」と「的の大きさ」で決まることを示しました。画面の操作の研究（HCI）では、MacKenzie（1992）がまとめた次の形がよく使われます。</p>
+<p><strong>MT = a + b · log₂(D / W + 1)</strong></p>
+<p>D は的までの距離、W は動かす向きに測った的の幅、a と b は人や機器（マウス、指など）で決まる定数です。log₂(D / W + 1) は「難しさの指数（ID）」と呼ばれ、単位はビットです。</p>
+<p>ポイントは、時間が D と W の「比」で決まることです。<strong>的を近づける</strong>か、<strong>的を大きくする</strong>と、速く、押しまちがいも少なくなります。距離が同じなら、幅を2倍にすると難しさはおよそ1ビット下がります。</p>
+<p>ウェブでは、WCAG 2.2 が押せる範囲の目安を示しています。24×24 CSS px 以上がレベルAA（2.5.8。小さくても周りに十分な間隔があれば例外）、44×44 CSS px 以上がレベルAAA（2.5.5）です。</p>
+        </div>
+      </section>
+      <section class="block">
+        <h2><span class="idx" aria-hidden="true">02</span>具体例</h2>
+        <div class="prose">
+          <p>悪い例：研究サイトの論文一覧で「PDF・スライド・コード」を、小さな文字リンクのまま詰めて並べます。押せる範囲は高さ28pxほど、隣とのすき間は10pxほどです。カーソルから600px先なら、難しさは log₂(600/28 + 1) ≈ 4.5ビット。スマホでは隣のリンクを押してしまいがちです。</p>
+<p>良い例：同じ3つを高さ56pxのボタンにして、20pxずつ間をあけます。難しさは log₂(600/56 + 1) ≈ 3.6ビットに下がり、指でもマウスでも一度で押せます。よく使う操作（「次へ」「送信」など）を、目と手が向かう場所の近くに置けば、D も小さくなります。</p>
+        </div>
+      </section>
+      <section class="block tip">
+        <h2><span class="idx" aria-hidden="true">03</span>今日から使えるひとこと</h2>
+        <blockquote>
+          <p>自分の研究サイトをスマホで開き、論文のPDFリンクやメニューを親指で押してみてください。押しにくければ、CSS の padding で押せる範囲を高さ44px以上に広げ、隣とのすき間もあけましょう。文字の大きさはそのままでも、押せる範囲だけを広げられます。フォームやアンケート画面でも、よく使うボタンは「大きく、近くに」です。</p>
+        </blockquote>
+      </section>
+      <section class="sources" aria-labelledby="sources-title">
+        <h2 id="sources-title">出典</h2>
+        <ol>
+          <li>
+            <a class="source-title" href="https://doi.org/10.1037/h0055392">The information capacity of the human motor system in controlling the amplitude of movement</a>
+            <span class="source-meta">Paul M. Fitts · 1954</span>
+            <span class="source-url">https://doi.org/10.1037/h0055392</span>
+            <span class="source-note">Journal of Experimental Psychology, 47(6), 381–391</span>
+          </li>
+          <li>
+            <a class="source-title" href="http://www.yorku.ca/mack/hci1992.html">Fitts&#x27; law as a research and design tool in human-computer interaction</a>
+            <span class="source-meta">I. Scott MacKenzie · 1992</span>
+            <span class="source-url">http://www.yorku.ca/mack/hci1992.html</span>
+            <span class="source-note">Human-Computer Interaction, 7, 91–139（MT = a + b log₂(D/W + 1) の形）</span>
+          </li>
+          <li>
+            <a class="source-title" href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">Understanding Success Criterion 2.5.8: Target Size (Minimum)</a>
+            <span class="source-meta">W3C WAI · 2023</span>
+            <span class="source-url">https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html</span>
+            <span class="source-note">WCAG 2.2、レベルAA：24×24 CSS px</span>
+          </li>
+          <li>
+            <a class="source-title" href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html">Understanding Success Criterion 2.5.5: Target Size (Enhanced)</a>
+            <span class="source-meta">W3C WAI</span>
+            <span class="source-url">https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html</span>
+            <span class="source-note">WCAG 2.2、レベルAAA：44×44 CSS px</span>
+          </li>
+        </ol>
+      </section>
+      <nav class="pager" aria-label="前後の回">
+      <div class="pager-slot">
+        <a class="pager-link" href="006.html">
+          <span class="pager-label">前の回</span>
+          <span class="pager-title">第6回 色覚の多様性に配慮した配色</span>
+        </a>
+      </div>
+      <div class="pager-slot pager-next">
+        <p class="pager-none">
+          <span class="pager-label">次の回</span>
+          <span class="pager-title">これが最新の回です</span>
+        </p>
+      </div>
+    </nav>
+    </article>
+  </main>
+  <footer class="site-footer">
+      <div class="wrap">
+        <p class="footer-name"><a href="../index.html">デザインアンテナ</a></p>
+        <ul class="footer-notes">
+        <li>掲載している文章は、個人の学習内容を短くまとめたものです。</li>
+        <li>図版には、AIで生成した画像が含まれることがあります。</li>
+        </ul>
+      </div>
+    </footer>
+</body>
+</html>
