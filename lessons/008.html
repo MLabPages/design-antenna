@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- data/lessons.json から scripts/build.py が生成。手で編集しない。 -->
+  <title>第8回 グリッドシステム｜デザインアンテナ</title>
+  <meta name="description" content="画面を見えない「列」と「すき間」で先に区切り、要素をその線にそろえて置くと、ページ全体に秩序が生まれます。">
+  <link rel="canonical" href="https://design-antenna.mlabcraft.com/lessons/008">
+  <meta name="theme-color" content="#0d3b66">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="デザインアンテナ">
+  <meta property="og:title" content="第8回 グリッドシステム｜デザインアンテナ">
+  <meta property="og:description" content="画面を見えない「列」と「すき間」で先に区切り、要素をその線にそろえて置くと、ページ全体に秩序が生まれます。">
+  <meta property="og:url" content="https://design-antenna.mlabcraft.com/lessons/008">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-11-22">
+  <meta property="article:section" content="レイアウト・グリッド">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans+JP:wght@400;500;600&amp;family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;display=swap">
+  <link rel="prev" href="007.html">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="page-lesson">
+  <a class="skip" href="#main">本文へ</a>
+  <div class="topline" aria-hidden="true"></div>
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="brand" href="../index.html">
+        <svg class="mark" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+  <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+    <path d="M16 22.4V13"/>
+    <path d="M10.1 15.1a7.4 7.4 0 0 1 11.8 0"/>
+    <path d="M6.3 11.2a12.4 12.4 0 0 1 19.4 0"/>
+  </g>
+  <circle cx="16" cy="24.5" r="1.9" fill="currentColor"/>
+</svg>
+        <span class="brand-text">
+          <span class="brand-en" lang="en">Design Antenna</span>
+          <span class="brand-ja">デザインアンテナ</span>
+        </span>
+      </a>
+      <nav class="top-nav" aria-label="サイト">
+        <a href="../index.html">目次</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <article class="wrap lesson">
+      <header class="lesson-head">
+        <p class="issue"><span class="issue-affix">第</span><span class="issue-num">8</span><span class="issue-affix">回</span></p>
+        <p class="lesson-meta"><time datetime="2026-11-22">2026年11月22日</time><span class="sep" aria-hidden="true">·</span><span class="lesson-cat">レイアウト・グリッド</span></p>
+        <h1 class="lesson-title">グリッドシステム</h1>
+        <p class="title-en" lang="en">Grid Systems</p>
+      </header>
+      <figure class="figure">
+          <img src="../images/008.png" alt="グリッドシステムの図。左の悪い例：研究スライドのタイトル、グラフ、箇条書き、出典の左端が5か所でばらばらにずれ、がたついて見える。右の良い例：同じスライドに薄い12列の帯を重ね、タイトルと出典とグラフは1列目の左端、箇条書きは8列目の左端にそろえて、左端の線が2本にまとまっている。下にマージン・列・ガターの位置を示すラベル。" width="1600" height="900" decoding="async">
+          <figcaption>左端の線を2本にしぼるだけで、スライドは整って見えます（良い例は12列のグリッド）。</figcaption>
+        </figure>
+      <section class="block">
+        <h2><span class="idx" aria-hidden="true">01</span>どういう知識か</h2>
+        <div class="prose">
+          <p>グリッドシステムは、紙面や画面をあらかじめ見えない縦の「列（カラム）」で区切り、文字や図をその線にそろえて置く方法です。スイスのグラフィックデザイナー、ヨゼフ・ミューラー＝ブロックマンは、1981年の著書『Grid Systems in Graphic Design』で、名刺から展示ブースまで使える手引きとしてまとめました。</p>
+<p>グリッドは3つの部品でできています。要素を置く<strong>列</strong>、列と列のあいだの<strong>ガター（溝）</strong>、外周の<strong>マージン（余白）</strong>です。ウェブでは、パソコンで12列、スマホで4列ほどにする例がよく見られます。12は2・3・4・6で割り切れるので、2分割・3分割・4分割を自由に組み合わせられます。</p>
+<p>ニールセン・ノーマン・グループは、グリッドが読みやすさと見渡しやすさを高め、目当ての場所へすばやくたどり着けるようにすると説明しています。</p>
+        </div>
+      </section>
+      <section class="block">
+        <h2><span class="idx" aria-hidden="true">02</span>具体例</h2>
+        <div class="prose">
+          <p>悪い例：研究発表のスライドで、タイトル、グラフ、箇条書き、出典を「空いているところ」に置いていきます。左端はそれぞれ数ピクセルずつずれ、グラフの幅もなんとなく決まっています。一つひとつは小さなずれでも、全体はがたついて見えます。</p>
+<p>良い例：同じスライドを12列で区切り、タイトルと出典は1列目の左端から、グラフは1〜7列、箇条書きは8〜12列に置きます。左端の線が2本にまとまるので、目は迷わず上から下へ流れます。次のスライドでも同じ線を使えば、発表全体に統一感が出ます。</p>
+        </div>
+      </section>
+      <section class="block tip">
+        <h2><span class="idx" aria-hidden="true">03</span>今日から使えるひとこと</h2>
+        <blockquote>
+          <p>PowerPoint や Keynote でスライドを1枚開き、縦のガイド（補助線）を引いて、左右のマージンと列の境目を決めてみてください。そのうえで、タイトル・図・本文の左端を必ずどれかの線にそろえます。研究サイトなら、CSS の grid-template-columns: repeat(12, 1fr) と gap で同じしくみを作れます。</p>
+        </blockquote>
+      </section>
+      <section class="sources" aria-labelledby="sources-title">
+        <h2 id="sources-title">出典</h2>
+        <ol>
+          <li>
+            <a class="source-title" href="https://niggli.ch/en/products/rastersysteme-fur-die-visuelle-gestaltung">Grid Systems in Graphic Design（Rastersysteme für die visuelle Gestaltung）</a>
+            <span class="source-meta">Josef Müller-Brockmann · 1981</span>
+            <span class="source-url">https://niggli.ch/en/products/rastersysteme-fur-die-visuelle-gestaltung</span>
+            <span class="source-note">Niggli刊、ISBN 978-3-7212-0145-1</span>
+          </li>
+          <li>
+            <a class="source-title" href="https://www.nngroup.com/articles/using-grids-in-interface-designs/">Using Grids in Interface Designs</a>
+            <span class="source-meta">Kelley Gordon（Nielsen Norman Group） · 2022</span>
+            <span class="source-url">https://www.nngroup.com/articles/using-grids-in-interface-designs/</span>
+            <span class="source-note">列・ガター・マージンの3要素、スマホ4列／デスクトップ12列の例</span>
+          </li>
+          <li>
+            <a class="source-title" href="https://getbootstrap.com/docs/5.3/layout/grid/">Grid system（Bootstrap v5.3 ドキュメント）</a>
+            <span class="source-meta">Bootstrap</span>
+            <span class="source-url">https://getbootstrap.com/docs/5.3/layout/grid/</span>
+            <span class="source-note">1行に12列のテンプレート</span>
+          </li>
+        </ol>
+      </section>
+      <nav class="pager" aria-label="前後の回">
+      <div class="pager-slot">
+        <a class="pager-link" href="007.html">
+          <span class="pager-label">前の回</span>
+          <span class="pager-title">第7回 フィッツの法則</span>
+        </a>
+      </div>
+      <div class="pager-slot pager-next">
+        <p class="pager-none">
+          <span class="pager-label">次の回</span>
+          <span class="pager-title">これが最新の回です</span>
+        </p>
+      </div>
+    </nav>
+    </article>
+  </main>
+  <footer class="site-footer">
+      <div class="wrap">
+        <p class="footer-name"><a href="../index.html">デザインアンテナ</a></p>
+        <ul class="footer-notes">
+        <li>掲載している文章は、個人の学習内容を短くまとめたものです。</li>
+        <li>図版には、AIで生成した画像が含まれることがあります。</li>
+        </ul>
+      </div>
+    </footer>
+</body>
+</html>
