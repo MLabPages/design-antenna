@@ -31,6 +31,7 @@ body:has(#filter-c7:checked) .toc-item:not([data-filter="c7"]){display:none}
 body:has(#filter-c8:checked) .toc-item:not([data-filter="c8"]){display:none}
 body:has(#filter-c9:checked) .toc-item:not([data-filter="c9"]){display:none}
 body:has(#filter-c10:checked) .toc-item:not([data-filter="c10"]){display:none}
+body:has(#filter-c11:checked) .toc-item:not([data-filter="c11"]){display:none}
 </style>
 </head>
 <body class="page-index">
@@ -56,14 +57,14 @@ body:has(#filter-c10:checked) .toc-item:not([data-filter="c10"]){display:none}
   </header>
   <main id="main" tabindex="-1">
     <div class="wrap">
-      <p class="count">全<span class="num">10</span>回、最新は<time datetime="2026-11-24">2026年11月24日</time></p>
+      <p class="count">全<span class="num">11</span>回、最新は<time datetime="2026-11-25">2026年11月25日</time></p>
       <fieldset class="filters">
         <legend>カテゴリで絞り込む</legend>
         <div class="choices">
           <label class="choice">
           <input type="radio" name="category" id="filter-all" checked>
           <span class="choice-label">すべて</span>
-          <span class="choice-n">10</span>
+          <span class="choice-n">11</span>
         </label><label class="choice">
           <input type="radio" name="category" id="filter-c1">
           <span class="choice-label">タイポグラフィ</span>
@@ -90,25 +91,38 @@ body:has(#filter-c10:checked) .toc-item:not([data-filter="c10"]){display:none}
           <span class="choice-n">1</span>
         </label><label class="choice">
           <input type="radio" name="category" id="filter-c7">
-          <span class="choice-label">データビジュアライゼーション</span>
+          <span class="choice-label">データ可視化</span>
           <span class="choice-n">1</span>
         </label><label class="choice">
           <input type="radio" name="category" id="filter-c8">
-          <span class="choice-label">プレゼン・スライドのデザイン</span>
+          <span class="choice-label">データビジュアライゼーション</span>
           <span class="choice-n">1</span>
         </label><label class="choice">
           <input type="radio" name="category" id="filter-c9">
-          <span class="choice-label">UI/UXの法則</span>
+          <span class="choice-label">プレゼン・スライドのデザイン</span>
           <span class="choice-n">1</span>
         </label><label class="choice">
           <input type="radio" name="category" id="filter-c10">
+          <span class="choice-label">UI/UXの法則</span>
+          <span class="choice-n">1</span>
+        </label><label class="choice">
+          <input type="radio" name="category" id="filter-c11">
           <span class="choice-label">レイアウト・グリッド</span>
           <span class="choice-n">1</span>
         </label>
         </div>
       </fieldset>
       <ol class="toc" role="list" aria-label="レッスン">
-        <li class="toc-item" role="listitem" data-filter="c6">
+        <li class="toc-item" role="listitem" data-filter="c7">
+      <a class="toc-link has-thumb" href="lessons/011.html">
+        <p class="toc-meta"><span class="toc-no">第11回</span><time class="dot-date" datetime="2026-11-25">2026.11.25</time></p>
+        <p class="toc-cat">データ可視化</p>
+        <h2 class="toc-title">スモールマルチプル</h2>
+        <p class="toc-en" lang="en">Small Multiples</p>
+        <p class="toc-summary">線が絡むグラフは、同じ軸の小さなグラフに分けて並べます。比べたいものが、形の違いとして一目で見えます。</p>
+        <img class="toc-thumb" src="images/011.png" alt="" width="1600" height="1140" loading="lazy" decoding="async">
+      </a>
+    </li><li class="toc-item" role="listitem" data-filter="c6">
       <a class="toc-link has-thumb" href="lessons/010.html">
         <p class="toc-meta"><span class="toc-no">第10回</span><time class="dot-date" datetime="2026-11-24">2026.11.24</time></p>
         <p class="toc-cat">デザイン史</p>
@@ -126,7 +140,7 @@ body:has(#filter-c10:checked) .toc-item:not([data-filter="c10"]){display:none}
         <p class="toc-summary">大きさ・色とコントラスト・まとまりで強弱をつけ、いちばん大事なものから順に目を導きます。</p>
         <img class="toc-thumb" src="images/009.png" alt="" width="1600" height="900" loading="lazy" decoding="async">
       </a>
-    </li><li class="toc-item" role="listitem" data-filter="c10">
+    </li><li class="toc-item" role="listitem" data-filter="c11">
       <a class="toc-link has-thumb" href="lessons/008.html">
         <p class="toc-meta"><span class="toc-no">第8回</span><time class="dot-date" datetime="2026-11-22">2026.11.22</time></p>
         <p class="toc-cat">レイアウト・グリッド</p>
@@ -135,7 +149,7 @@ body:has(#filter-c10:checked) .toc-item:not([data-filter="c10"]){display:none}
         <p class="toc-summary">画面を見えない「列」と「すき間」で先に区切り、要素をその線にそろえて置くと、ページ全体に秩序が生まれます。</p>
         <img class="toc-thumb" src="images/008.png" alt="" width="1600" height="900" loading="lazy" decoding="async">
       </a>
-    </li><li class="toc-item" role="listitem" data-filter="c9">
+    </li><li class="toc-item" role="listitem" data-filter="c10">
       <a class="toc-link has-thumb" href="lessons/007.html">
         <p class="toc-meta"><span class="toc-no">第7回</span><time class="dot-date" datetime="2026-11-21">2026.11.21</time></p>
         <p class="toc-cat">UI/UXの法則</p>
@@ -153,7 +167,7 @@ body:has(#filter-c10:checked) .toc-item:not([data-filter="c10"]){display:none}
         <p class="toc-summary">グラフの色分けは「赤と緑」をやめて、色覚のちがいを越えて見分けやすい Okabe–Ito の色に。色だけに頼ら…</p>
         <img class="toc-thumb" src="images/006.png" alt="" width="2400" height="1740" loading="lazy" decoding="async">
       </a>
-    </li><li class="toc-item" role="listitem" data-filter="c8">
+    </li><li class="toc-item" role="listitem" data-filter="c9">
       <a class="toc-link has-thumb" href="lessons/005.html">
         <p class="toc-meta"><span class="toc-no">第5回</span><time class="dot-date" datetime="2026-11-19">2026.11.19</time></p>
         <p class="toc-cat">プレゼン・スライドのデザイン</p>
@@ -171,7 +185,7 @@ body:has(#filter-c10:checked) .toc-item:not([data-filter="c10"]){display:none}
         <p class="toc-summary">文章は1行を短めに。欧文なら45〜75字、日本語なら40字以内を目安に、段落の幅を先に決めましょう。</p>
         <img class="toc-thumb" src="images/004.png" alt="" width="2400" height="1530" loading="lazy" decoding="async">
       </a>
-    </li><li class="toc-item" role="listitem" data-filter="c7">
+    </li><li class="toc-item" role="listitem" data-filter="c8">
       <a class="toc-link has-thumb" href="lessons/003.html">
         <p class="toc-meta"><span class="toc-no">第3回</span><time class="dot-date" datetime="2026-11-17">2026.11.17</time></p>
         <p class="toc-cat">データビジュアライゼーション</p>

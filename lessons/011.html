@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- data/lessons.json から scripts/build.py が生成。手で編集しない。 -->
+  <title>第11回 スモールマルチプル｜デザインアンテナ</title>
+  <meta name="description" content="線が絡むグラフは、同じ軸の小さなグラフに分けて並べます。比べたいものが、形の違いとして一目で見えます。">
+  <link rel="canonical" href="https://design-antenna.mlabcraft.com/lessons/011">
+  <meta name="theme-color" content="#0d3b66">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="デザインアンテナ">
+  <meta property="og:title" content="第11回 スモールマルチプル｜デザインアンテナ">
+  <meta property="og:description" content="線が絡むグラフは、同じ軸の小さなグラフに分けて並べます。比べたいものが、形の違いとして一目で見えます。">
+  <meta property="og:url" content="https://design-antenna.mlabcraft.com/lessons/011">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-11-25">
+  <meta property="article:section" content="データ可視化">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans+JP:wght@400;500;600&amp;family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;display=swap">
+  <link rel="prev" href="010.html">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="page-lesson">
+  <a class="skip" href="#main">本文へ</a>
+  <div class="topline" aria-hidden="true"></div>
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="brand" href="../index.html">
+        <svg class="mark" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+  <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+    <path d="M16 22.4V13"/>
+    <path d="M10.1 15.1a7.4 7.4 0 0 1 11.8 0"/>
+    <path d="M6.3 11.2a12.4 12.4 0 0 1 19.4 0"/>
+  </g>
+  <circle cx="16" cy="24.5" r="1.9" fill="currentColor"/>
+</svg>
+        <span class="brand-text">
+          <span class="brand-en" lang="en">Design Antenna</span>
+          <span class="brand-ja">デザインアンテナ</span>
+        </span>
+      </a>
+      <nav class="top-nav" aria-label="サイト">
+        <a href="../index.html">目次</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <article class="wrap lesson">
+      <header class="lesson-head">
+        <p class="issue"><span class="issue-affix">第</span><span class="issue-num">11</span><span class="issue-affix">回</span></p>
+        <p class="lesson-meta"><time datetime="2026-11-25">2026年11月25日</time><span class="sep" aria-hidden="true">·</span><span class="lesson-cat">データ可視化</span></p>
+        <h1 class="lesson-title">スモールマルチプル</h1>
+        <p class="title-en" lang="en">Small Multiples</p>
+      </header>
+      <figure class="figure">
+          <img src="../images/011.png" alt="スモールマルチプルの比較図。左上の悪い例は、条件AからFの6本の折れ線が6色で1枚に重なり、右に凡例があり、「色と凡例を往復しないと、どれがどれかわからない」と注記。右上の良い例は、同じデータを条件ごとの小さなパネル6枚に分けて3×2に並べ、各パネルで主役の線だけ緑、ほかの条件は薄い灰色、縦軸は全パネル共通の0〜100。下段は「並べるときの約束：軸の範囲をそろえる」。×の例は条件A（90）と条件B（30）の棒が、縦軸の上限が100と35で違うため同じ高さに見える。○の例は上限を100にそろえ、差がそのまま見える。最下部に「『何と比べて？』に、並べた形で答える。」図の数値は説明用の架空データ。" width="1600" height="1140" decoding="async">
+          <figcaption>6本を1枚に重ねるより、同じ軸の小さなグラフを並べるほうが、違いが形で見えます（図の数値は説明用の架空データです）。</figcaption>
+        </figure>
+      <section class="block">
+        <h2><span class="idx" aria-hidden="true">01</span>どういう知識か</h2>
+        <div class="prose">
+          <p>スモールマルチプルは、同じ形で同じ軸のグラフを小さくして、格子のように並べる表し方です。条件ごと、地域ごと、年ごとに1枚ずつ描き、並べることで違いを見せます。この呼び名を広めたのは、統計グラフィックスの研究者エドワード・タフティです。</p>
+<p>タフティは『Envisioning Information』（1990）で、量のデータを考えるときの核心は「何と比べて？」という問いであり、スモールマルチプルはその比較を目に見える形で直接示すと述べています。読み手は1枚目で読み方を覚えれば、残りは<strong>変わったところだけ</strong>を見ればよくなります。</p>
+<p>大事な約束は、<strong>すべてのパネルで軸の範囲と目盛りをそろえる</strong>ことです。クラウス・ウィルケは『Fundamentals of Data Visualization』（2019）で、読み手はパネルの軸がそろっていると期待するので、そろっていないと誤読されやすいと注意しています。</p>
+        </div>
+      </section>
+      <section class="block">
+        <h2><span class="idx" aria-hidden="true">02</span>具体例</h2>
+        <div class="prose">
+          <p>悪い例：6つの条件の推移を、1枚の折れ線グラフに6色で重ね、凡例を右に置きます。線が何度も交差し、読み手は色と凡例を往復しないと、どの線がどの条件かわかりません。</p>
+<p>良い例：条件ごとに小さなパネルに分け、縦軸を0〜100にそろえて3×2に並べます。各パネルでは主役の1本だけに色をつけ、ほかの条件は薄い灰色で背景に残します。上がる、下がる、山がある、といった違いが形で見え、全体の中での位置もわかります。</p>
+<p>もうひとつの落とし穴：パネルごとに縦軸の上限を変えると、90と30が同じ高さに見えてしまいます。</p>
+        </div>
+      </section>
+      <section class="block tip">
+        <h2><span class="idx" aria-hidden="true">03</span>今日から使えるひとこと</h2>
+        <blockquote>
+          <p>線が4本を超えて絡んでいるグラフを1枚見つけたら、条件ごとのパネルに分けてみてください。R の ggplot2 なら facet_wrap()、Python の matplotlib なら plt.subplots(sharey=True) で、軸をそろえたまま並べられます（facet_wrap() は初期設定で軸がそろいます）。パネルの並び順は、比べてほしい順にします。</p>
+        </blockquote>
+      </section>
+      <section class="sources" aria-labelledby="sources-title">
+        <h2 id="sources-title">出典</h2>
+        <ol>
+          <li>
+            <a class="source-title" href="https://www.edwardtufte.com/book/envisioning-information/">Envisioning Information</a>
+            <span class="source-meta">Edward R. Tufte · 1990</span>
+            <span class="source-url">https://www.edwardtufte.com/book/envisioning-information/</span>
+            <span class="source-note">p.67。「何と比べて？」とスモールマルチプルの説明。本文の言葉は英文をもとにした要約です</span>
+          </li>
+          <li>
+            <a class="source-title" href="https://www.edwardtufte.com/book/the-visual-display-of-quantitative-information/">The Visual Display of Quantitative Information</a>
+            <span class="source-meta">Edward R. Tufte · 1983</span>
+            <span class="source-url">https://www.edwardtufte.com/book/the-visual-display-of-quantitative-information/</span>
+            <span class="source-note">第8章「Data Density and Small Multiples」</span>
+          </li>
+          <li>
+            <a class="source-title" href="https://clauswilke.com/dataviz/multi-panel-figures.html">Fundamentals of Data Visualization（第21章 Multi-panel figures）</a>
+            <span class="source-meta">Claus O. Wilke · 2019</span>
+            <span class="source-url">https://clauswilke.com/dataviz/multi-panel-figures.html</span>
+            <span class="source-note">パネル間で軸の範囲と目盛りをそろえる理由</span>
+          </li>
+        </ol>
+      </section>
+      <nav class="pager" aria-label="前後の回">
+      <div class="pager-slot">
+        <a class="pager-link" href="010.html">
+          <span class="pager-label">前の回</span>
+          <span class="pager-title">第10回 ディーター・ラムスの「良いデザインの10原則」</span>
+        </a>
+      </div>
+      <div class="pager-slot pager-next">
+        <p class="pager-none">
+          <span class="pager-label">次の回</span>
+          <span class="pager-title">これが最新の回です</span>
+        </p>
+      </div>
+    </nav>
+    </article>
+  </main>
+  <footer class="site-footer">
+      <div class="wrap">
+        <p class="footer-name"><a href="../index.html">デザインアンテナ</a></p>
+        <ul class="footer-notes">
+        <li>文章は出典をもとにAIが学習用に要約したものです。詳しくは各回の出典へ。</li>
+        <li>図はAIが書いたコードで描いています。</li>
+        </ul>
+      </div>
+    </footer>
+</body>
+</html>
