@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- data/lessons.json から scripts/build.py が生成。手で編集しない。 -->
+  <title>第12回 行間｜デザインアンテナ</title>
+  <meta name="description" content="日本語の本文の行間は、文字の半分〜1字分。line-height に直すと 1.5〜2.0 が目安です。">
+  <link rel="canonical" href="https://design-antenna.mlabcraft.com/lessons/012">
+  <meta name="theme-color" content="#0d3b66">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="デザインアンテナ">
+  <meta property="og:title" content="第12回 行間｜デザインアンテナ">
+  <meta property="og:description" content="日本語の本文の行間は、文字の半分〜1字分。line-height に直すと 1.5〜2.0 が目安です。">
+  <meta property="og:url" content="https://design-antenna.mlabcraft.com/lessons/012">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-11-26">
+  <meta property="article:section" content="タイポグラフィ">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans+JP:wght@400;500;600&amp;family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;display=swap">
+  <link rel="prev" href="011.html">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="page-lesson">
+  <a class="skip" href="#main">本文へ</a>
+  <div class="topline" aria-hidden="true"></div>
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="brand" href="../index.html">
+        <svg class="mark" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+  <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+    <path d="M16 22.4V13"/>
+    <path d="M10.1 15.1a7.4 7.4 0 0 1 11.8 0"/>
+    <path d="M6.3 11.2a12.4 12.4 0 0 1 19.4 0"/>
+  </g>
+  <circle cx="16" cy="24.5" r="1.9" fill="currentColor"/>
+</svg>
+        <span class="brand-text">
+          <span class="brand-en" lang="en">Design Antenna</span>
+          <span class="brand-ja">デザインアンテナ</span>
+        </span>
+      </a>
+      <nav class="top-nav" aria-label="サイト">
+        <a href="../index.html">目次</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <article class="wrap lesson">
+      <header class="lesson-head">
+        <p class="issue"><span class="issue-affix">第</span><span class="issue-num">12</span><span class="issue-affix">回</span></p>
+        <p class="lesson-meta"><time datetime="2026-11-26">2026年11月26日</time><span class="sep" aria-hidden="true">·</span><span class="lesson-cat">タイポグラフィ</span></p>
+        <h1 class="lesson-title">行間</h1>
+        <p class="title-en" lang="en">Line Spacing / Leading</p>
+      </header>
+      <figure class="figure">
+          <img src="../images/012.png" alt="行間の比較図。上段に同じ日本語の文章を3つのカードで並べる。左の悪い例「詰めすぎ（行間0.1字分）」は行がほぼくっつき「次の行を見失いやすい」。中央の良い例「ちょうどよい（行間0.7字分）」は緑の枠で「行を目で追いやすい」。右の悪い例「空けすぎ（行間1.6字分）」は行が離れすぎて「ひとつの段落に見えない」。下段左は「しくみ：行送り＝文字サイズ＋行間」の図で、大きな文字「行を」「追う」の字の枠と、そのあいだの行間の帯に、文字サイズ・行間・行送りの寸法線がついている。下段右は「日本語の本文の目安」として、行間は文字の半分〜1字分、line-heightは1.5〜2.0、1行が35字を超えるなら1字分に近づける、出典はW3C『日本語組版処理の要件（JLREQ）』。" width="1600" height="1120" decoding="async">
+          <figcaption>詰めすぎても、空けすぎても読みにくい。日本語の本文は、行間を文字の半分〜1字分に。</figcaption>
+        </figure>
+      <section class="block">
+        <h2><span class="idx" aria-hidden="true">01</span>どういう知識か</h2>
+        <div class="prose">
+          <p>行間は、行と行のあいだの<strong>空き</strong>です。似た言葉の<strong>行送り</strong>は、ある行から次の行までの距離で、「文字サイズ＋行間」になります。CSS の line-height は行送りのほうを指定します。ソフトによって「行間」と呼んでいるものが違うので、どちらの数字かを確かめます。</p>
+<p>W3C の『日本語組版処理の要件（JLREQ）』によると、日本語の本文の行間は、文字サイズの<strong>半分（二分アキ）から1字分（全角アキ）</strong>にすることが多く、1行が35字を超えるような長い行では、1字分か、それより少し詰めた行間がよいとされています。line-height に直すと、およそ <strong>1.5〜2.0</strong> です。行間にルビや注を入れる場合などを除けば、1字分より広くはしないとも書かれています。</p>
+<p>欧文では、Matthew Butterick が行送りを文字サイズの120〜145%にするのが最適としています。数字を比べると、日本語の目安は欧文より広めです。</p>
+        </div>
+      </section>
+      <section class="block">
+        <h2><span class="idx" aria-hidden="true">02</span>具体例</h2>
+        <div class="prose">
+          <p>悪い例：研究サイトの本文が line-height 1.1。行と行がほとんどくっつき、行末から次の行頭へ目を戻すときに、次の行を見失いやすくなります。反対に、ゆったり見せたくて行間を2字分近く空けると、行がばらばらの帯に見え、ひとつの段落としてまとまりません。</p>
+<p>良い例：本文の行間を0.7字分ほど（line-height 1.7）にします。行を目で追いやすく、段落のまとまりも残ります。段落と段落のあいだは、行間よりはっきり広く空けます。</p>
+        </div>
+      </section>
+      <section class="block tip">
+        <h2><span class="idx" aria-hidden="true">03</span>今日から使えるひとこと</h2>
+        <blockquote>
+          <p>研究サイトの CSS で本文の line-height を確かめ、1.4 より小さければ 1.7 前後にしてみてください（1行が35字を超える長い行なら 1.8〜2.0）。スライドでは段落設定の行間を少しずつ広げ、行と行のあいだに文字の半分くらいの空きが見えたところで止めます。</p>
+<p>サイトでは、読む人が行送りを文字サイズの1.5倍以上に広げても、文字が切れたり重なったりしないことが WCAG 2.2 の達成基準 1.4.12 で求められています。文字を入れる枠の高さは固定しないでおきましょう。</p>
+        </blockquote>
+      </section>
+      <section class="sources" aria-labelledby="sources-title">
+        <h2 id="sources-title">出典</h2>
+        <ol>
+          <li>
+            <a class="source-title" href="https://www.w3.org/TR/jlreq/">日本語組版処理の要件（Requirements for Japanese Text Layout, JLREQ）</a>
+            <span class="source-meta">W3C</span>
+            <span class="source-url">https://www.w3.org/TR/jlreq/</span>
+            <span class="source-note">基本版面の行間についての注。行間は二分アキ以上・全角アキ以下が多く、35字を超える行長では全角アキか少し詰める</span>
+          </li>
+          <li>
+            <a class="source-title" href="https://practicaltypography.com/line-spacing.html">Line spacing（Butterick&#x27;s Practical Typography）</a>
+            <span class="source-meta">Matthew Butterick</span>
+            <span class="source-url">https://practicaltypography.com/line-spacing.html</span>
+            <span class="source-note">欧文の行送りは文字サイズの120〜145%が最適</span>
+          </li>
+          <li>
+            <a class="source-title" href="https://www.w3.org/WAI/WCAG22/Understanding/text-spacing.html">Understanding Success Criterion 1.4.12: Text Spacing（WCAG 2.2）</a>
+            <span class="source-meta">W3C</span>
+            <span class="source-url">https://www.w3.org/WAI/WCAG22/Understanding/text-spacing.html</span>
+            <span class="source-note">行送りを文字サイズの1.5倍以上にしても内容や機能が失われないこと</span>
+          </li>
+        </ol>
+      </section>
+      <nav class="pager" aria-label="前後の回">
+      <div class="pager-slot">
+        <a class="pager-link" href="011.html">
+          <span class="pager-label">前の回</span>
+          <span class="pager-title">第11回 スモールマルチプル</span>
+        </a>
+      </div>
+      <div class="pager-slot pager-next">
+        <p class="pager-none">
+          <span class="pager-label">次の回</span>
+          <span class="pager-title">これが最新の回です</span>
+        </p>
+      </div>
+    </nav>
+    </article>
+  </main>
+  <footer class="site-footer">
+      <div class="wrap">
+        <p class="footer-name"><a href="../index.html">デザインアンテナ</a></p>
+        <ul class="footer-notes">
+        <li>文章は出典をもとにAIが学習用に要約したものです。詳しくは各回の出典へ。</li>
+        <li>図はAIが書いたコードで描いています。</li>
+        </ul>
+      </div>
+    </footer>
+</body>
+</html>
