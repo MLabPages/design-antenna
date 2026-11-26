@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://design-antenna.mlabcraft.com/</loc>
-    <lastmod>2026-11-25</lastmod>
+    <lastmod>2026-11-26</lastmod>
   </url>
   <url>
     <loc>https://design-antenna.mlabcraft.com/lessons/001</loc>
@@ -47,5 +47,9 @@
   <url>
     <loc>https://design-antenna.mlabcraft.com/lessons/011</loc>
     <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://design-antenna.mlabcraft.com/lessons/012</loc>
+    <lastmod>2026-11-26</lastmod>
   </url>
 </urlset>
