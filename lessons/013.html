@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- data/lessons.json から scripts/build.py が生成。手で編集しない。 -->
+  <title>第13回 類同の法則｜デザインアンテナ</title>
+  <meta name="description" content="色・形・大きさが似たものは同じ仲間に見え、似ていないものは目立ちます。">
+  <link rel="canonical" href="https://design-antenna.mlabcraft.com/lessons/013">
+  <meta name="theme-color" content="#0d3b66">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="デザインアンテナ">
+  <meta property="og:title" content="第13回 類同の法則｜デザインアンテナ">
+  <meta property="og:description" content="色・形・大きさが似たものは同じ仲間に見え、似ていないものは目立ちます。">
+  <meta property="og:url" content="https://design-antenna.mlabcraft.com/lessons/013">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-11-27">
+  <meta property="article:section" content="ゲシュタルト原則">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans+JP:wght@400;500;600&amp;family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;display=swap">
+  <link rel="prev" href="012.html">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="page-lesson">
+  <a class="skip" href="#main">本文へ</a>
+  <div class="topline" aria-hidden="true"></div>
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="brand" href="../index.html">
+        <svg class="mark" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+  <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+    <path d="M16 22.4V13"/>
+    <path d="M10.1 15.1a7.4 7.4 0 0 1 11.8 0"/>
+    <path d="M6.3 11.2a12.4 12.4 0 0 1 19.4 0"/>
+  </g>
+  <circle cx="16" cy="24.5" r="1.9" fill="currentColor"/>
+</svg>
+        <span class="brand-text">
+          <span class="brand-en" lang="en">Design Antenna</span>
+          <span class="brand-ja">デザインアンテナ</span>
+        </span>
+      </a>
+      <nav class="top-nav" aria-label="サイト">
+        <a href="../index.html">目次</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <article class="wrap lesson">
+      <header class="lesson-head">
+        <p class="issue"><span class="issue-affix">第</span><span class="issue-num">13</span><span class="issue-affix">回</span></p>
+        <p class="lesson-meta"><time datetime="2026-11-27">2026年11月27日</time><span class="sep" aria-hidden="true">·</span><span class="lesson-cat">ゲシュタルト原則</span></p>
+        <h1 class="lesson-title">類同の法則</h1>
+        <p class="title-en" lang="en">Law of Similarity</p>
+      </header>
+      <figure class="figure">
+          <img src="../images/013.png" alt="類同の法則の図。上段左は、等間隔に並んだ丸が列ごとに青とオレンジに交互に塗られ、同じ色の縦の列にまとまって見える例で「見た目が似たもの同士が『仲間』になる」。上段右は、グレーの丸の中に1つだけオレンジ赤の丸があり「似ていないものは、仲間から浮いて目立つ」。下段は棒グラフの比較。左の悪い例「色がばらばら（どれが大事か分からない）」は手法A〜Eと提案の6本がすべて違う色で「色に意味がなく、目が迷う」。右の良い例「仲間は同じ色（強調は1本だけ）」はA〜Eをグレー、提案だけをオレンジ赤にして数値74を添え、緑の枠で「見せたい1本がすぐ分かる」。" width="1600" height="1110" decoding="async">
+          <figcaption>似ているものは仲間に見え、違うものは目立つ。同じ意味には同じ色、強調したいものだけ色を変える。</figcaption>
+        </figure>
+      <section class="block">
+        <h2><span class="idx" aria-hidden="true">01</span>どういう知識か</h2>
+        <div class="prose">
+          <p>類同の法則は、<strong>色・形・大きさなど見た目が似ているものは、同じグループに見える</strong>という知覚のはたらきです。1923年に心理学者マックス・ヴェルトハイマーが、近接（第1回）などと並ぶまとまりの要因として挙げました。</p>
+<p>Nielsen Norman Group の記事によると、まったく同じでなくても、色・形・大きさのどれか1つが共通していれば仲間に見えます。近接の法則は「距離が近い」ことでまとまりますが、類同は<strong>離れた場所にあっても</strong>見た目が似ていればまとまるのが違いです。とくに色は強い手がかりで、形の違うもの同士もつなげます。</p>
+<p>裏返すと、<strong>似ていないものは仲間から浮いて目立ちます</strong>。同じ記事は、いちばん押してほしいボタンにだけ別の色を割り当てるよう勧めています。</p>
+        </div>
+      </section>
+      <section class="block">
+        <h2><span class="idx" aria-hidden="true">02</span>具体例</h2>
+        <div class="prose">
+          <p>悪い例：手法A〜Eと提案手法の棒グラフを、1本ずつ違う色で塗る。色に意味がないので「どれとどれが仲間か」が伝わらず、いちばん見せたい提案手法も埋もれます。研究サイトで、リンクではない見出しや強調語にリンクと同じ青を使うのも、押せるものと押せないものが仲間に見えてしまう例です。</p>
+<p>良い例：比較の手法はすべて同じグレーにし、提案手法の1本だけ色を変えて数値を添えます。複数の図に同じ条件が出てくるなら、どの図でも同じ色にそろえます。サイトでは、リンクの色を1つに決め、リンクにだけ使います。</p>
+        </div>
+      </section>
+      <section class="block tip">
+        <h2><span class="idx" aria-hidden="true">03</span>今日から使えるひとこと</h2>
+        <blockquote>
+          <p>スライドやグラフを作ったら、「同じ色＝同じ意味」になっているかを確かめてください。意味の違うものに同じ色を使っていたら変え、強調したいものは1つに絞って、それだけ色を変えます。</p>
+<p>研究サイトでは、リンク・ボタン・見出しのそれぞれで見た目（色・形・大きさ）をそろえます。同じ見た目なら同じようにはたらく、と読む人は期待するからです。</p>
+        </blockquote>
+      </section>
+      <section class="sources" aria-labelledby="sources-title">
+        <h2 id="sources-title">出典</h2>
+        <ol>
+          <li>
+            <a class="source-title" href="https://doi.org/10.1007/BF00410640">Untersuchungen zur Lehre von der Gestalt. II</a>
+            <span class="source-meta">Max Wertheimer · 1923</span>
+            <span class="source-url">https://doi.org/10.1007/BF00410640</span>
+            <span class="source-note">Psychologische Forschung, 4, 301–350。類同を含むまとまりの要因を示した原典</span>
+          </li>
+          <li>
+            <a class="source-title" href="https://www.nngroup.com/articles/gestalt-similarity/">Similarity Principle in Visual Design</a>
+            <span class="source-meta">Aurora Harley（Nielsen Norman Group） · 2020</span>
+            <span class="source-url">https://www.nngroup.com/articles/gestalt-similarity/</span>
+            <span class="source-note">色・形・大きさのどれかが共通すれば仲間に見える。離れていてもまとまる。リンク色はクリックできるものだけに、主要ボタンには別の色を</span>
+          </li>
+          <li>
+            <a class="source-title" href="https://doi.org/10.1037/a0029333">A century of Gestalt psychology in visual perception: I. Perceptual grouping and figure–ground organization</a>
+            <span class="source-meta">Johan Wagemans ほか · 2012</span>
+            <span class="source-url">https://doi.org/10.1037/a0029333</span>
+            <span class="source-note">Psychological Bulletin, 138(6), 1172–1217。ヴェルトハイマーが挙げたまとまりの要因に近接と類同が含まれる</span>
+          </li>
+          <li>
+            <a class="source-title" href="https://lawsofux.com/law-of-similarity/">Law of Similarity（Laws of UX）</a>
+            <span class="source-meta">Jon Yablonski</span>
+            <span class="source-url">https://lawsofux.com/law-of-similarity/</span>
+            <span class="source-note">リンクやナビゲーションは本文の文字と見た目で区別する</span>
+          </li>
+        </ol>
+      </section>
+      <nav class="pager" aria-label="前後の回">
+      <div class="pager-slot">
+        <a class="pager-link" href="012.html">
+          <span class="pager-label">前の回</span>
+          <span class="pager-title">第12回 行間</span>
+        </a>
+      </div>
+      <div class="pager-slot pager-next">
+        <p class="pager-none">
+          <span class="pager-label">次の回</span>
+          <span class="pager-title">これが最新の回です</span>
+        </p>
+      </div>
+    </nav>
+    </article>
+  </main>
+  <footer class="site-footer">
+      <div class="wrap">
+        <p class="footer-name"><a href="../index.html">デザインアンテナ</a></p>
+        <ul class="footer-notes">
+        <li>文章は出典をもとにAIが学習用に要約したものです。詳しくは各回の出典へ。</li>
+        <li>図はAIが書いたコードで描いています。</li>
+        </ul>
+      </div>
+    </footer>
+</body>
+</html>
