@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- data/lessons.json から scripts/build.py が生成。手で編集しない。 -->
+  <title>第14回 チャンク化｜デザインアンテナ</title>
+  <meta name="description" content="情報を意味のあるまとまりに分けると、読み取りやすく、覚えやすくなります。">
+  <link rel="canonical" href="https://design-antenna.mlabcraft.com/lessons/014">
+  <meta name="theme-color" content="#0d3b66">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="デザインアンテナ">
+  <meta property="og:title" content="第14回 チャンク化｜デザインアンテナ">
+  <meta property="og:description" content="情報を意味のあるまとまりに分けると、読み取りやすく、覚えやすくなります。">
+  <meta property="og:url" content="https://design-antenna.mlabcraft.com/lessons/014">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-11-28">
+  <meta property="article:section" content="情報デザイン">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans+JP:wght@400;500;600&amp;family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;display=swap">
+  <link rel="prev" href="013.html">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="page-lesson">
+  <a class="skip" href="#main">本文へ</a>
+  <div class="topline" aria-hidden="true"></div>
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="brand" href="../index.html">
+        <svg class="mark" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+  <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+    <path d="M16 22.4V13"/>
+    <path d="M10.1 15.1a7.4 7.4 0 0 1 11.8 0"/>
+    <path d="M6.3 11.2a12.4 12.4 0 0 1 19.4 0"/>
+  </g>
+  <circle cx="16" cy="24.5" r="1.9" fill="currentColor"/>
+</svg>
+        <span class="brand-text">
+          <span class="brand-en" lang="en">Design Antenna</span>
+          <span class="brand-ja">デザインアンテナ</span>
+        </span>
+      </a>
+      <nav class="top-nav" aria-label="サイト">
+        <a href="../index.html">目次</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <article class="wrap lesson">
+      <header class="lesson-head">
+        <p class="issue"><span class="issue-affix">第</span><span class="issue-num">14</span><span class="issue-affix">回</span></p>
+        <p class="lesson-meta"><time datetime="2026-11-28">2026年11月28日</time><span class="sep" aria-hidden="true">·</span><span class="lesson-cat">情報デザイン</span></p>
+        <h1 class="lesson-title">チャンク化</h1>
+        <p class="title-en" lang="en">Chunking</p>
+      </header>
+      <figure class="figure">
+          <img src="../images/014.png" alt="チャンク化の図。左が悪い例「区切りなし（ひと続きのかたまり）」、右が良い例「まとまりに分ける（3〜4個ずつ、見出しつき）」。上段は電話番号で、左は 09012345678 と続けて書かれ「11桁を1つずつ覚えることになる」、右は 090、1234、5678 の3つのかたまりに区切られ「3つのかたまりなら、すっと読める」。下段はスライドの箇条書き12項目で、左は灰色の行が12本続き「どこで区切るか分からず、全体がつかめない」、右は青の「背景」、オレンジの「方法」、緑の「結果」の3つの見出しの下に4項目ずつ並び「見出しで3つに分け、各4項目。全体がひと目で分かる」。" width="1600" height="1110" decoding="async">
+          <figcaption>同じ情報でも、意味のあるまとまりに区切ると読みやすい。数は目安で、大事なのは意味でまとめること。</figcaption>
+        </figure>
+      <section class="block">
+        <h2><span class="idx" aria-hidden="true">01</span>どういう知識か</h2>
+        <div class="prose">
+          <p>チャンク化は、ばらばらの情報を<strong>意味のあるまとまり（チャンク）</strong>に分けて見せることです。チャンクはもともと認知心理学の言葉で、記憶のなかでひとまとめに扱われる単位を指します。Nielsen Norman Group の Kate Moran は、内容を小さく区切って見せると、ざっと目を通しやすくなり、理解や記憶も助けると説明しています。</p>
+<p>よく引かれるのが、ジョージ・ミラーの論文「The Magical Number Seven, Plus or Minus Two」（1956）です。人が短期記憶に保てるのはおよそ7チャンクという内容ですが、「人は7個までしか扱えない」という意味に<strong>誤解されがち</strong>です。同じ記事は、メニューは画面に出ていて覚えておく必要がないので、項目を7個に絞っても使いやすさは上がらない、と注意しています。</p>
+<p>その後、ネルソン・コーワン（2001）は多くの研究を見直し、ミラーの7はおおまかな目安で、短期記憶の容量は<strong>平均して約4チャンク</strong>（3〜5）と結論づけました。数を守ることより、<strong>関係のあるものを意味でまとめる</strong>ことが大事です。</p>
+        </div>
+      </section>
+      <section class="block">
+        <h2><span class="idx" aria-hidden="true">02</span>具体例</h2>
+        <div class="prose">
+          <p>悪い例：電話番号を 09012345678 と続けて書く。11桁を1つずつ追うことになり、読み間違えやすくなります。スライドに箇条書きを12行並べるのも同じで、どこで区切ればよいか読み手にはわかりません。</p>
+<p>良い例：090-1234-5678 のように、慣れた形で3つに区切ります。12項目は「背景」「方法」「結果」の見出しで3つに分け、それぞれ4項目ずつにします。研究サイトでも、ナビや本文を「研究」「業績」「プロフィール」のように意味で分け、見出しで区切ると、目的の場所を探しやすくなります。</p>
+        </div>
+      </section>
+      <section class="block tip">
+        <h2><span class="idx" aria-hidden="true">03</span>今日から使えるひとこと</h2>
+        <blockquote>
+          <p>箇条書きが5行を超えたら、意味の近いものを3〜4個ずつのまとまりにして、それぞれに短い見出しをつけてみてください。</p>
+<p>ただし「7個以内」を絶対のルールにはしません。画面に並んで見えているメニューなら、項目が多くても意味ごとに整理されていれば使えます。覚えてもらう必要があるものほど、小さく区切ります。</p>
+        </blockquote>
+      </section>
+      <section class="sources" aria-labelledby="sources-title">
+        <h2 id="sources-title">出典</h2>
+        <ol>
+          <li>
+            <a class="source-title" href="https://www.nngroup.com/articles/chunking/">How Chunking Helps Content Processing</a>
+            <span class="source-meta">Kate Moran（Nielsen Norman Group） · 2016</span>
+            <span class="source-url">https://www.nngroup.com/articles/chunking/</span>
+            <span class="source-note">チャンクの定義、区切った電話番号は覚えやすく見渡しやすい、ミラーの7の誤用（メニューを7個に絞る必要はない）、見出し・太字・箇条書きで区切る</span>
+          </li>
+          <li>
+            <a class="source-title" href="https://doi.org/10.1037/h0043158">The magical number seven, plus or minus two: Some limits on our capacity for processing information</a>
+            <span class="source-meta">George A. Miller · 1956</span>
+            <span class="source-url">https://doi.org/10.1037/h0043158</span>
+            <span class="source-note">Psychological Review, 63(2), 81–97。短期記憶の範囲はおよそ7チャンク</span>
+          </li>
+          <li>
+            <a class="source-title" href="https://doi.org/10.1017/S0140525X01003922">The magical number 4 in short-term memory: A reconsideration of mental storage capacity</a>
+            <span class="source-meta">Nelson Cowan · 2001</span>
+            <span class="source-url">https://doi.org/10.1017/S0140525X01003922</span>
+            <span class="source-note">Behavioral and Brain Sciences, 24(1), 87–114。ミラーの7はおおまかな目安で、容量は平均約4チャンク（3〜5）</span>
+          </li>
+        </ol>
+      </section>
+      <nav class="pager" aria-label="前後の回">
+      <div class="pager-slot">
+        <a class="pager-link" href="013.html">
+          <span class="pager-label">前の回</span>
+          <span class="pager-title">第13回 類同の法則</span>
+        </a>
+      </div>
+      <div class="pager-slot pager-next">
+        <p class="pager-none">
+          <span class="pager-label">次の回</span>
+          <span class="pager-title">これが最新の回です</span>
+        </p>
+      </div>
+    </nav>
+    </article>
+  </main>
+  <footer class="site-footer">
+      <div class="wrap">
+        <p class="footer-name"><a href="../index.html">デザインアンテナ</a></p>
+        <ul class="footer-notes">
+        <li>文章は出典をもとにAIが学習用に要約したものです。詳しくは各回の出典へ。</li>
+        <li>図はAIが書いたコードで描いています。</li>
+        </ul>
+      </div>
+    </footer>
+</body>
+</html>
